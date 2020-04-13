@@ -8,7 +8,6 @@
 
   <script>
     // start with strings, numbers and booleans
-
     let age = 100;
     let age2 = age;
     console.log('age:', age, 'age2:', age2);
@@ -57,7 +56,6 @@
     };
 
     // and think we make a copy:
-
     const captain = person; //references, does not copy
     captain.number = 1;
     console.log('person:', person);
@@ -68,7 +66,6 @@
         name: 'Duke Garwood',
         age: 80
       };
-
       const cap2 = Object.assign({}, person2, {number: 77}); //assigns original 'person2' values AND new values, in this case 'number' to new object, in this case 'cap2'
       console.log('person2:', person2);
       console.log('cap2:', cap2);
@@ -78,14 +75,14 @@
         name: 'Lil Jonnie Malkovich',
         age: 55
       };
-
       const cap3 = Object.assign({}, person3, { shoeColor: 'red' , age: 33 }); //assigoriginal 'person2' values AND new values, in this case 'number' new object, in this case 'cap2'
       console.log('person3:', person3);
       console.log('cap3:', cap3);
       
+    // We CAN also use object ...spread
+      const cap4 = {...person};
+      console.log('cap4:', cap4);
       
-
-    // We will hopefully soon see the object ...spread
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
