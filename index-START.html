@@ -52,13 +52,29 @@
 
     // with Objects
     const person = {
-      name: 'Wes Bos',
+      name: 'Morgan Costigan',
       age: 80
     };
 
     // and think we make a copy:
 
+    const captain = person; //references, does not copy
+    captain.number = 1;
+    console.log('person:', person);
+    console.log('captain:', captain);
+    
     // how do we take a copy instead?
+
+      const person2 = {
+        name: 'Duke Garwood',
+        age: 80
+      };
+
+      const cap2 = Object.assign({}, person2, {number: 77}); //assigns original 'person2' values AND new values, in this case 'number' to new object, in this case 'cap2'
+      console.log('person2:', person2);
+      console.log('cap2:', cap2);
+      
+      
 
     // We will hopefully soon see the object ...spread
 
