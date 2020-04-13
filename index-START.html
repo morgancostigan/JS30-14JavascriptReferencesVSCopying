@@ -85,6 +85,29 @@
       
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+    const morgan = {
+      name: 'morgan',
+      age: 78,
+      games: {
+        best: 'carcassonne',
+        okay: 'trains',
+        bad: 'monopoly'
+      }
+    };
+
+    const me = Object.assign({}, morgan);
+    me.name = 'MEEEE!!!!';
+    console.clear();
+    console.log('morgan:', morgan);
+    console.log('me:', me);
+    //now, changes made more than 1 layer deep will affect the original.
+
+
+    //to do a full clone, you can use cloneDeep OR this messy way...
+    const dev = JSON.parse(JSON.stringify(morgan));
+    //changes now made to 'dev' won't affect the original
+    
+    
 
   </script>
 
