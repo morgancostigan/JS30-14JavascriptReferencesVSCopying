@@ -24,7 +24,7 @@
     console.log('players:', players);
     console.log('team:', team);
     // You might think we can just do something like this:
-    team[3] = 'Tony';
+           // team[3] = 'Tony';
     // however what happens when we update that array?
 
     // now here is the problem!
@@ -34,6 +34,13 @@
     // Why? It's because that is an array reference, not an array copy. They both point to the same array!
 
     // So, how do we fix this? We take a copy instead!
+    const team2 = players.slice();
+    //OR
+    const team3 = [].concat(players);
+    console.log('team2:', team2);
+    console.log('team3:', team3);
+    
+    
 
     // one way
 
