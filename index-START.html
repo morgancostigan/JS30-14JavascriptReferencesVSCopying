@@ -12,17 +12,19 @@
     let age = 100;
     let age2 = age;
     console.log('age:', age, 'age2:', age2);
-    age = 200; //age is redefined, but age2 is still defined as original age as it hasn't been redefined
+    age = 200; //age is reassigned, but age2 is still assigned original age as it hasn't been reassigned
     console.log('age:', age, 'age2:', age2);
     
 
     // Let's say we have an array
-    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
-
+    const players = ['Morgan', 'Aoife', 'Matt', 'Mandy']
     // and we want to make a copy of it.
+    const team = players;
 
+    console.log('players:', players);
+    console.log('team:', team);
     // You might think we can just do something like this:
-
+    team[3] = 'Tony';
     // however what happens when we update that array?
 
     // now here is the problem!
