@@ -9,6 +9,13 @@
   <script>
     // start with strings, numbers and booleans
 
+    let age = 100;
+    let age2 = age;
+    console.log('age:', age, 'age2:', age2);
+    age = 200; //age is redefined, but age2 is still defined as original age as it hasn't been redefined
+    console.log('age:', age, 'age2:', age2);
+    
+
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
